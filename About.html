@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #A8E890;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: #425F57;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #425F57;
+        padding: 14px 16px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #CFFF8D;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #CFFF8D;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content .header {
+        background: #CFFF8D;
+        padding: 16px;
+        color: #425F57;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        background-color: #CFFF8D;
+        height: 250px;
+      }
+
+      .column a {
+        float: none;
+        color: #425F57;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .column a:hover {
+        background-color: #425F57;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          height: auto;
+        }
+      }
+    .yungmin {
+      width: 500px;
+      background-color: #A8E890;
+      text-align: center;
+      margin-right:30px;
+      height:800px;
+      float: left;
+      }
+    .image{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+      .biopara{
+      background-color: #749F82;
+      text-align: left;
+      margin-left:30px;
+      }
+    .mark2{
+      text-align: center;
+    }
+      .p{text-align: justify;}
+    img {
+  border-radius: 50%;
+}
+  .ul{
+    list-style: none;
+  }
+  .li1::before{
+    content:"\2022";
+    color:red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.li2::before{
+  content:"\2022";
+  color:blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.li3::before{
+  content:"\2022";
+  color:yellow;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+  }
+      </style>
+    <title>About</title>
+</head>
+<body style="font-family:Times New Roman;background-color: #CFFF8D;">
+    <mark2><h1>Lab03 About</h1></mark2>
+    <div class="navbar">
+      <a href="file:///Users/student/Desktop/Lab03.html">Home</a>
+      <a href="News.html">News</a>
+      <a href="Activity.html">Activity</a>
+      <a href="Contact.html">Contact</a>
+      <a href="About.html">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Organization
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2>Office</h2>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3>Office A</h3>
+              <a href="#">info 1</a>
+              <a href="#">info 2</a>
+              <a href="#">info 3</a>
+            </div>
+            <div class="column">
+              <h3>Office B</h3>
+              <a href="#">info 1</a>
+              <a href="#">info 2</a>
+              <a href="#">info 3</a>
+            </div>
+            <div class="column">
+              <h3>Office C</h3>
+              <a href="#">info 1</a>
+              <a href="#">info 2</a>
+              <a href="#">info 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yungmin">
+    <h1>Kim Yungmin</h1>
+    <img src="https://blog.pythian.com/wp-content/uploads/Cookie-Monster.png"
+     alt="Kim yungmin, Eating cookies" class="image">
+        Full-time student<br>
+        <a href="https://www.naver.com">Go to the website</a>
+        <a href="kimkitkat0608@gmail.com">kimkitkat0608@gmail.com</a><br>
+        <a href="https://github.com/kimkitkat/109990022/">Go to the github</a><br>
+      </div>
+      <div class="biopara">
+    <h2>Biography</h2>
+            <p>Born in <b>Daegu</b>,<i>Korea.</i>Something something.</p>
+            <p>With the long-standing history and experience in education, Taipei Tech devotes to cultivating top technical professionals.
+                Taipei Tech specializes in three fields: technology, design and management. In a recent teaching excellence evaluation by Taiwan’s Ministry
+                of Education, Taipei Tech was ranked first among all the other technological universities. It is also Number One Paradigm Technological University
+                for its research and academic excellence. Taipei Tech alumni have contributed considerably to the economic development of Taiwan, and have won wide
+                praise from businesses of all industries.</p>
+                <hr>
+                <ul>
+                  <li class="li1">knitting</li>
+                </ul>
+                <ul>
+                  <li class="li2">Gardening</li>
+                </ul>
+                <ul>
+                  <li class="li3">eating</li>
+                  </ul>
+                <ol type="1">
+                  <li>I</li>
+                  <li>want</li>
+                  <li>go</li>
+                  <li>home</li>
+                </ol>
+    <hr>
+    <h2>Taipei Tech Graduates</h2>
+    <p>Taipei Tech graduates are the top favorite employees among Taiwan’s top 1000 enterprises, as declared by Cheers magazine. Taipei Tech is also renowned as top World
+        Green University. In UI Green Metrics University Rankings, Taipei Tech is ranked as the 1st Green University in Taiwan and the 6th in world in the city center catergory.</p>
+    </div>
+</body>
+</html>
