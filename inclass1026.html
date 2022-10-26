@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.imge {
+  filter: Sepia(100%);
+}
+img {
+  border:10px solid #555;
+}
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  border: 3px solid white;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 8px;
+}
+.time{
+  background-color: #4d4d4d;
+  color: white;
+}
+.business{
+  background-color: #ddff99;
+}
+.applied{
+  background-color: #ccffff;
+}
+.physics{
+  background-color: #ffcc99;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#week {
+  text-align: left;
+}
+</style>
+</head>
+<body>
+  <h3>Color change of pic</h3>
+<p>Color</p>
+<img src="https://upload.wikimedia.org/wikipedia/zh/3/34/Lenna.jpg" alt="Color">
+<p> Sepia </p>
+<img class=imge src="https://upload.wikimedia.org/wikipedia/zh/3/34/Lenna.jpg",alt="Sepia"><br><br><br>
+
+<h3>Table</h3>
+<table>
+  <tr class="time">
+    <th>Time</th>
+    <th id="week">Mon</th>
+    <th id="week">Tue</th>
+    <th id="week">Wed</th>
+  </tr>
+  <tr>
+    <td>7:30 AM</td>
+    <td>Breakfast</td>
+    <td>Breakfast</td>
+    <td>Breakfast</td>
+  </tr>
+  <tr>
+    <td>8:00 AM</td>
+    <th class="business" rowspan="2">Business: Lecture<br>Bldg B, Rm256</th>
+    <th class="physics" rowspan="3">Physics: Lab<br>Bldg J, Rm 309</th>
+    <th class="business" rowspan="2">Business: Lecture<br>Bldg B, Rm 256</th>
+  </tr>
+  <tr>
+  <td>8:30 AM</td>
+  </tr>
+  <tr>
+    <td>9:00 AM</td>
+    <th class="applied" rowspan="2">Applied Math<br>Bldg H, Rm 100</th>
+    <th class="applied" rowspan="2">Applied Math<br>Bldg H, Rm 100</th>
+  </tr>
+  <tr>
+    <td>9:30 AM</td>
+    <td> </td>
+      </tr>
+  <tr>
+    <td>10:00 AM</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>10:30 AM</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>11:00 AM</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+  <td>11:30 AM</td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
+</table>
+</body>
+</html>
