@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+      table, th, td{
+        border: 1px solid black;
+        text-align : center;
+        width : 200px;
+        height : 80px;
+      }
+      .subject {
+        background-color : #009999;
+        color : white;
+      }
+      .table {
+        background-color : #ffffcc;
+      }
+      .button1{
+        background-color: #d9ff66;
+        border: 2px outset;
+        padding: 15px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+      .button2{
+        background-color: #66d9ff;
+        border: 2px outset;
+        padding: 15px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+      .button3{
+        background-color: #ff66d9;
+        border: 2px outset;
+        padding: 15px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+      .button4{
+        background-color: #ffb366;
+        border: 2px outset;
+        padding: 15px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <table id = "myTable" class="table" >
+      <tr class="subject">
+      <th>Math</th>
+      <th>English</th>
+      <th>Programming</th>
+      </tr>
+      <tr>
+        <td>90</td>
+        <td>60</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>80</td>
+        <td>86</td>
+        <td>98</td>
+      </table>
+      <p>Change The Table Width</p>
+      <button type="button" onclick="myFunction1()">200px</button>
+      <button type="button" onclick="myFunction2()">500px</button>
+      <p>Change The Border and the Spacing Width</p>
+      <button type="button" onclick="myFunction3()">1px</button>
+      <button type="button" onclick="myFunction4()">10px</button>
+      <button type="button" onclick="myFunction5()">10px</button>
+      <p>Change the Table Color</p>
+      <button class="button1" onclick="myFunction6()"> </button>
+      <button class="button2" onclick="myFunction7()"> </button>
+      <button class="button3" onclick="myFunction8()"> </button>
+      <button class="button4" onclick="myFunction9()"> </button>
+      <br>
+      <br>
+      <button type="button" onclick="myFunction10()">Reset</button>
+      <script src="myScript.js"></script>
+  </body>
+</html>
