@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function drawline(){
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.strokeStyle="red";
+    ctx. beginPath();
+      ctx. moveTo(50,50);
+      ctx. lineTo(150,50);
+      ctx.lineTo(200,100);
+      ctx.lineTo(350,100);
+      ctx.stroke();
+  }
+  function drawcircle(){
+    var canvas = document.getElementById('myCanvas2');
+    var ctx = canvas.getContext('2d');
+
+    ctx.strokeStyle="#009900";
+    ctx.lineWidth= 10;
+
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"#009900");
+    grd.addColorStop(1,"#fcba03");
+    ctx.fillStyle=grd;
+
+    ctx.beginPath();
+      ctx.arc(100, 100, 50, 0, 2 * Math.PI,true);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.font="30px Arial";
+      ctx.fillstyle="#ffffff";
+      ctx.fillText("Hi", 100, 100);
+  }
+</script>
+<style>
+  canvas { border : 1px solid black; }
+</style>
+</head>
+<body>
+<svg width="1000" height="600">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"
+      style="stop-color:rgb(0,0,0);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(0, 0, 255);stop-opacity:1" />
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:rgb(255, 255, 153);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(255, 153, 204);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+	<ellipse cx="145" cy="260" rx="45" ry="25" fill="red" />
+	<ellipse cx="255" cy="260" rx="45" ry="25" fill="red" />
+  <circle cx="200" cy="160" r="100"
+  stroke="black" stroke-width="0" fill="pink" />
+  <circle cx="100" cy="170" r="30"
+  stroke="black" stroke-width="0" fill="pink" />
+  <circle cx="300" cy="170" r="30"
+  stroke="black" stroke-width="0" fill="pink" />
+  <ellipse cx="170" cy="120" rx="10" ry="23" fill="url(#grad1)"/>
+    <ellipse cx="230" cy="120" rx="10" ry="23" fill="url(#grad1)"/>
+     <circle cx="170" cy="107" r="6"
+  stroke="black" stroke-width="0" fill="white" />
+     <circle cx="230" cy="107" r="6"
+  stroke="black" stroke-width="0" fill="white" />
+  <circle cx="200" cy="170" r="15"
+  stroke="black" stroke-width="0" fill="red" />
+  <ellipse cx="200" cy="400" rx="160" ry="45" fill="url(#grad2)" />
+   <text fill="#ffffff" font-size="45" font-family="Verdana" x="147" y="415">Kirby</text>
+</svg>
+<br>
+<input type="button" value="draw line" onclick="drawline();"><br/>
+<canvas id="myCanvas" width="400" height="200"></canvas>
+
+<br>
+<input type="button" value="draw circle" onclick="drawcircle();"><br/>
+<canvas id="myCanvas2" width="400" height="200"></canvas>
+<br>
+
+<canvas id="myCanvas3" width="600" height="600" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+var c = document.getElementById("myCanvas3");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd1 = ctx.createLinearGradient(0,0,0,200);
+grd1.addColorStop(0,"white");
+grd1.addColorStop(1,"red");
+// Fill with gradient
+ctx.fillStyle = grd1;
+ctx. globalAlpha=0.8;
+ctx.fillRect(10,10,150,80);
+var grd2 = ctx.createLinearGradient(0,0,200,0);
+grd2.addColorStop(0,"blue");
+grd2.addColorStop(1,"white");
+ctx.globalAlpha=0.7;
+ctx.fillStyle=grd2;
+ctx.fillRect(70,50,150,80)
+
+ctx.strokeStyle="green";
+ctx.lineWidth= 5;
+ctx. beginPath();
+  ctx. moveTo(0,100);
+  ctx. lineTo(60,100);
+  ctx.lineTo(60,140);
+  ctx.lineTo(210,140);
+  ctx.stroke();
+
+  ctx.strokeStyle="purple";
+  ctx.linewidth=5;
+  ctx.beginPath();
+  ctx.arc(200, 50, 10, 3, 2.5 * Math.PI);
+  ctx.stroke();
+
+ctx.fillStyle="orange";
+ctx.font = "20px Arial";
+ctx.fillText("OverLap", 75, 80);
+
+
+
+</script>
+
+
+</body>
+</html>
