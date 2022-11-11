@@ -47,9 +47,9 @@ function component(width, height, color, x, y) {
     }
 }
 
-var change_red_x = 1;
 var change_yellow_x = 1;
 var change_yellow_y = 1;
+var change_red_x = 1;
 var change_blue_x = 1;
 var change_blue_y = 1;
 
@@ -98,7 +98,40 @@ var change_blue_y = 1;
     yellowGamePiece.update();
     blueGamePiece.update();
 }
+
+function start1(){
+  change_yellow_x = 1;
+  change_yellow_y = 1;
+  change_red_x = 1;
+  change_blue_x = 1;
+  change_blue_y = 1;
+  myGameArea.updateGameArea();
+}
+
+function stop(){
+  change_yellow_x = 0;
+  change_yellow_y = 0;
+  change_red_x = 0;
+  change_blue_x = 0;
+  change_blue_y = 0;
+}
+function reset(){
+  myGameArea.clear();
+  redGamePiece = new component(75, 75, "red", 10, 10);
+  yellowGamePiece = new component(75, 75, "yellow", 50, 60);
+  blueGamePiece = new component(75, 75, "blue", 10, 220);
+  change_yellow_x = 1;
+  change_yellow_y = 1;
+  change_red_x = 1;
+  change_blue_x = 1;
+  change_blue_y = 1;
+}
 </script>
-<p>The three components moves by changing the x- and y-coordinates on every update.</p>
+  <div>
+  <button onclick="start1()">Start</button>
+  <button onclick="stop()">Stop</button>
+  <button onclick="reset()">Reset</button>
+
+</div>
 </body>
 </html>
