@@ -5,18 +5,13 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 function App() {
   return (
     <div className="App">
-        <h2>Welcome to NTUT Web Programming</h2>
-        <Sidebar>
-        <Menu>
-            <MenuItem routerLink={<Link to="/"/>}> Home </MenuItem>
-            <MenuItem routerLink={<Link to="search"/>}> Search </MenuItem>
-        </Menu>
-        </Sidebar>
-  <Routes>
-    <Route index element={<Home />} />
-    <Route path="search" element={<Search />} />
-    <Route path="*" element={<NoMatch />} />
-  </Routes>
+      <Title />
+      <MySidebar />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="search" element={<Search />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
     </div>
   );
 }
@@ -45,6 +40,17 @@ function Title(){
     <div>
     <h2>Welcome to NTUT Web Programming</h2>
     </div>
+  );
+}
+
+function MySidebar(){
+  return(
+    <Sidebar>
+    <Menu>
+        <MenuItem routerLink={<Link to="/"/>}> Home </MenuItem>
+        <MenuItem routerLink={<Link to="search"/>}> Search </MenuItem>
+    </Menu>
+    </Sidebar>
   );
 }
 
